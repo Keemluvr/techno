@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./vue.js"></script>
-    <link rel="stylesheet" href="./style.css">
     <title>Techno</title>
+
+    <link rel="stylesheet" href="style/settings/all.css">
+    <link rel="stylesheet" href="style/generic/all.css">
+    <!-- <link rel="stylesheet" href="style/elements/all.css"> -->
+    <link rel="stylesheet" href="style/components/all.css">
+    <link rel="stylesheet" href="style/containers/all.css">
+
 </head>
 <body>
 
     <div id="app">
-        {{ produtos }}
+        
+
+        <section class="produtos">
+            <div class="produto" v-for="produto in produtos" :key="produto.id">
+                <img class="produto_img" :src="produto.img" :alt="produto.nome"></img>
+                <div class="produto_info">
+                    <span class="produto_preco">{{ produto.preco }}</span>
+                    <h2 class="produto_titulo">{{ produto.nome }}</h2>
+                </div>
+            </div>
+        </section>
+
+
     </div>
     
     <script src="./app.js"></script>

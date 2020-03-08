@@ -1,0 +1,30 @@
+.produtos {
+    max-width: 900px;
+    margin: var(--gap-large) auto 0 auto;
+}
+
+/* produto */
+.produtos > .produto {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--gap-small);
+    background: var(--color-secondary);
+    box-shadow: 0 0 2rem rgba(0,0,0,.1);
+}
+
+/* imagem do produto */
+.produtos > .produto > .produto_img {
+    max-width: 300px;
+    margin-right: var(--gap-small);
+}
+
+/* título do produto */
+.produtos > .produto > .produto_info > .produto_titulo {
+    font-size: var(--font-size-large);
+    line-height: 1;
+}
+
+/* preco do produto */
+.produtos > .produto > .produto_info > .produto_preco {
+    color: var(--color-primary-light);
+}
