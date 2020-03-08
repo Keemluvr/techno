@@ -16,18 +16,22 @@
 <body>
 
     <div id="app">
-        
 
+        <!--  modal do produto aberto -->
+        <section class="modal">
+            {{ produto }}
+        </section>
+        
+        <!-- produtos --> 
         <section class="produtos">
-            <div class="produto" v-for="produto in produtos" :key="produto.id">
-                <img class="produto_img" :src="produto.img" :alt="produto.nome"></img>
+            <div class="produto" v-for="item in produtos" @click="fetchProduto(item.id)" :key="item.id">
+                <img class="produto_img" :src="item.img" :alt="item.nome"></img>
                 <div class="produto_info">
-                    <span class="produto_preco">{{ produto.preco | numeroPreco }}</span>
-                    <h2 class="produto_titulo">{{ produto.nome }}</h2>
+                    <span class="produto_preco">{{ item.preco | numeroPreco }}</span>
+                    <h2 class="produto_titulo">{{ item.nome }}</h2>
                 </div>
             </div>
         </section>
-
 
     </div>
     

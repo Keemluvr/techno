@@ -3,10 +3,12 @@ const vm = new Vue({
     el: "#app",
 
     data: {
-        produtos: []
+        produtos: [],
+        produto: false
     },
 
     filters: {
+        // Transforma um número no formato da moeda [pt-br]
         numeroPreco(valor) {
             const formatter = new Intl.NumberFormat('pt-BR', {
                 style: 'currency',
@@ -22,6 +24,13 @@ const vm = new Vue({
             fetch('./api/produtos.json')
                 .then( response => response.json())
                 .then( json => this.produtos = json)
+        },
+
+        // Puxa um produto específico pelo id
+        fetchProduto(id) {
+            fetch(`./api/produtos/${id}/dados.json`)
+                .then( response => response.json())
+                .then( json =>  this.produto = json)
         }
     },
     
