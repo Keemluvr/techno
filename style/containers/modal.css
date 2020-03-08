@@ -1,3 +1,78 @@
 .modal {
-    
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--gap-medium);
+}
+
+.modal, .modal::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.modal::before {
+    content: "";
+    position: fixed;
+    height: 100vh;
+    background: var(--color-primary-light);
+}
+
+/* container da modal */
+.modal > .modal_container {
+    position: relative;
+    display: grid;
+    align-items: end;
+    gap: var(--gap-small);
+    padding: 0 var(--gap-small) var(--gap-small) 0;
+    background: linear-gradient(to right, transparent 250px, var(--color-secondary) 250px );
+    z-index: 1;
+}
+
+/* container da imagem do produto na modal */
+.modal .modal_img {
+    grid-column: 1;
+    margin-top: var(--gap-small);
+    box-shadow: 0 3px 4px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.2);
+}
+
+/* imagem do produto na modal */
+.modal .modal_img > img {
+    max-width: 300px;
+    display: block;
+}
+
+/* dados do produto na modal */
+.modal .modal_dados {
+    grid-column: 2;
+    max-width: 600px;
+}
+
+/* dados do produto na modal */
+.modal .modal_dados > .modal_btn {
+   margin-top: var(--gap-medium);
+   padding: 10px 25px;
+}
+
+/* avaliações do produto na model */
+.modal .avaliacoes {
+    grid-column: 2;
+}
+
+/* cada avaliação na model*/
+.modal .avaliacoes .avaliacao {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding-bottom: 20px;
+}
+
+/* descrição da avaliação na model*/
+.modal .avaliacao > .avaliacao_descricao {
+    color: rgba(0,0,0,.7);
+    margin: 20px 0 5px 0;
+}
+
+/* usuario da avaliação na model */
+.modal .avaliacao > .avaliacao_usuario {
+    font-weight: bold;
 }

@@ -14,18 +14,12 @@
 }
 
 /* imagem do produto */
-.produtos > .produto > .produto_img {
+.produtos .produto_img {
     max-width: 300px;
     margin-right: var(--gap-small);
 }
 
-/* título do produto */
-.produtos > .produto > .produto_info > .produto_titulo {
-    font-size: var(--font-size-large);
-    line-height: 1;
-}
-
 /* preco do produto */
-.produtos > .produto > .produto_info > .produto_preco {
+.produtos .produto_preco {
     color: var(--color-primary-light);
 }

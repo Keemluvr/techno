@@ -5,5 +5,7 @@
     --font-family-primary: 'Noto Serif', serif; 
 
     /* tamanho */
+    --font-size-small: 1rem;
+    --font-size-normal: 1.75rem;
     --font-size-large: 3rem;
 }
