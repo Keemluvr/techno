@@ -28,6 +28,7 @@
     padding: 0 var(--gap-small) var(--gap-small) 0;
     background: linear-gradient(to right, transparent 250px, var(--color-secondary) 250px );
     z-index: 1;
+    animation: fadeIn .3s forwards;
 }
 
 /* container da imagem do produto na modal */
@@ -47,6 +48,31 @@
 .modal .modal_dados {
     grid-column: 2;
     max-width: 600px;
+}
+
+/* botão que fecha a modal */
+.modal .modal_dados > .modal_fechar {
+    border-radius: 50%;
+    border: 1px solid var(--color-primary);
+    width: var(--gap-small);
+    height: var(--gap-small);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: var(--font-size-small);
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.2);
+}
+
+.modal .modal_dados > .modal_fechar:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transition: all .5s;
+}
+
+.modal .modal_dados > .modal_fechar:active {
+    background: var(--color-tertiary);
 }
 
 /* dados do produto na modal */
@@ -75,4 +101,15 @@
 /* usuario da avaliação na model */
 .modal .avaliacao > .avaliacao_usuario {
     font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3D(50px,0,0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3D(0,0,0);
+    }
 }

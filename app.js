@@ -31,6 +31,20 @@ const vm = new Vue({
             fetch(`./api/produtos/${id}/dados.json`)
                 .then( response => response.json())
                 .then( json =>  this.produto = json)
+        },
+
+        // Fecha a modal ao se clicar fora dela
+        fecharModal({ target, currentTarget }) {
+            if(target === currentTarget) this.produto = false
+        },
+
+        // Chamado ao abrir a modal
+        abrirModal(id) {
+            this.fetchProduto(id)
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
         }
     },
     
