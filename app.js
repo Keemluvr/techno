@@ -4,7 +4,9 @@ const vm = new Vue({
 
     data: {
         produtos: [],
-        produto: false
+        produto: false,
+        carrinho: [],
+        carrinhoTotal: 0,
     },
 
     filters: {
@@ -45,7 +47,7 @@ const vm = new Vue({
                 top: 0,
                 behavior: "smooth"
             })
-        }
+        },
     },
     
     created() {

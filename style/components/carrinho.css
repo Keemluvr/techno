@@ -1,0 +1,4 @@
+.carrinho::after {
+    content: "";
+    background: url("../../assets/carrinho.svg") no-repeat center center;
+}
