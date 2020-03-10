@@ -20,6 +20,7 @@ const vm = new Vue({
     },
 
     computed: {
+        // Atualiza o valor total do carrinho
         carrinhoTotal() {
             let total = 0
             if(this.carrinho.length)
@@ -27,6 +28,13 @@ const vm = new Vue({
                     total += item.preco
                 });
             return total
+        }
+    },
+
+    watch: {
+        // Salva no local storage a cada atualização no carrinho
+        carrinho() {
+            window.localStorage.carrinho = JSON.stringify(this.carrinho)
         }
     },
 
@@ -69,10 +77,18 @@ const vm = new Vue({
         // Remove um item do carrinho pelo seu id
         removerItem(index) {
             this.carrinho.splice(index, 1)
+        },
+
+        // Verifica se há algo do carrinho salvo no local storage
+        checarLocalStorage() {
+            if(window.localStorage.carrinho) {
+                this.carrinho = JSON.parse(window.localStorage.carrinho)
+            }
         }
     },
     
     created() {
         this.fetchProdutos()
+        this.checarLocalStorage()
     },
 })
