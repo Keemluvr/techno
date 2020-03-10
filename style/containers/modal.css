@@ -53,7 +53,7 @@
 /* botão que fecha a modal */
 .modal .modal_dados > .modal_fechar {
     border-radius: 50%;
-    border: 1px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
     width: var(--gap-small);
     height: var(--gap-small);
     position: absolute;
