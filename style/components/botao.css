@@ -18,5 +18,11 @@
 }
 
 .botao:active {
-    background: var(--color-tertiary)
+    background: var(--color-tertiary);
+}
+
+.botao:disabled {
+    color: var(--color-secondary);
+    background: var(--color-tertiary);
+    border: 1px solid var(--color-tertiary);
 }

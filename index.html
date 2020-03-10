@@ -20,7 +20,7 @@
         <!-- Header -->
         <header class="header">
             <img class="logo" src="./assets//techno.svg" alt="Logo Techno">
-            <div class="carrinho">{{ carrinhoTotal }} | </div>
+            <div class="carrinho">{{ carrinhoTotal | numeroPreco }} | {{ carrinho.length }}</div>
         </header>
         
 
@@ -47,7 +47,8 @@
                     <span class="modal_preco">{{ produto.preco | numeroPreco }}</span>
                     <h2 class="modal_titulo titulo">{{ produto.nome }}</h2>
                     <p>{{ produto.descricao }}</p>
-                    <button class="modal_btn botao">Adicionar item</button>
+                    <button class="modal_btn botao" v-if="produto.estoque > 0" @click="adicionarItem">Adicionar item</button>
+                    <button class="modal_btn botao" v-else disabled>Produto esgotado</button>
                 </div>
                 <div class="avaliacoes">
                     <h2 class="avaliacoes_subtitulo subtitulo">Avaliações</h2>

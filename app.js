@@ -6,7 +6,6 @@ const vm = new Vue({
         produtos: [],
         produto: false,
         carrinho: [],
-        carrinhoTotal: 0,
     },
 
     filters: {
@@ -17,6 +16,17 @@ const vm = new Vue({
                 currency: 'BRL' 
             });
             return formatter.format(valor);
+        }
+    },
+
+    computed: {
+        carrinhoTotal() {
+            let total = 0
+            if(this.carrinho.length)
+                this.carrinho.forEach(item => {
+                    total += item.preco
+                });
+            return total
         }
     },
 
@@ -48,6 +58,18 @@ const vm = new Vue({
                 behavior: "smooth"
             })
         },
+
+        // Adiciona o item ao carrinho
+        adicionarItem(event) {
+            this.produto.estoque--
+            const {id, nome, preco} = this.produto
+            this.carrinho.push({id, nome, preco})
+        },
+
+        // Remove um item do carrinho pelo seu id
+        removerItem(index) {
+            this.carrinho.splice(index, 1)
+        }
     },
     
     created() {
