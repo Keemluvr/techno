@@ -37,6 +37,13 @@ const vm = new Vue({
         // Salva no local storage a cada atualização no carrinho
         carrinho() {
             window.localStorage.carrinho = JSON.stringify(this.carrinho)
+        },
+
+        // Modifica a URL e o título da página
+        produto() {
+            document.title = this.produto.nome || "Techno"
+            const hash = this.produto.id  || ""
+            history.pushState(null, null, `#${hash}`)
         }
     },
 
@@ -96,11 +103,19 @@ const vm = new Vue({
             setTimeout(() => {
                 this.alertaAtivo = false
             },1500)
+        },
+
+        // Verifica se na URL há algum id aberto já, para levar direto ao produto daquele id
+        router() {
+            const hash = document.location.hash
+            if(hash)
+                this.fetchProduto(hash.replace("#",""))
         }
     },
     
     created() {
         this.fetchProdutos()
         this.checarLocalStorage()
+        this.router()
     },
 })
