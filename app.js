@@ -7,6 +7,7 @@ const vm = new Vue({
         produto: false,
         carrinho: [],
         mensagemAlerta: "Item adicionado",
+        carrinhoAtivo: true,
         alertaAtivo: false,
     },
 
@@ -65,6 +66,11 @@ const vm = new Vue({
         // Fecha a modal ao se clicar fora dela
         fecharModal({ target, currentTarget }) {
             if(target === currentTarget) this.produto = false
+        },
+
+        //Fecha o carrinho ao clicar fora dele
+        fecharCarrinho({ target, currentTarget }) {
+            if(target === currentTarget) this.carrinhoAtivo = false
         },
 
         // Chamado ao abrir a modal

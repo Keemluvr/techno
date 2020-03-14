@@ -1,4 +1,5 @@
 :root {
+    --gap-tiny: 10px;
     --gap-smaller: 25px;
     --gap-small: 40px;
     --gap-medium: 80px;

@@ -26,9 +26,19 @@
     align-items: end;
     gap: var(--gap-small);
     padding: 0 var(--gap-small) var(--gap-small) 0;
-    background: linear-gradient(to right, transparent 250px, var(--color-secondary) 250px );
+    margin: var(--gap-medium) auto;
+    max-width: 800px;
+    background: var(--color-secondary);
     z-index: 1;
+    animation: fadeInDown .3s forwards;
+}
+
+/* container da modal que tem foto */
+.modal > .modal_container.with_image {
+    margin: 0px;
+    max-width: 100vw;
     animation: fadeIn .3s forwards;
+    background: linear-gradient(to right, transparent 250px, var(--color-secondary) 250px );
 }
 
 /* container da imagem do produto na modal */
