@@ -50,3 +50,10 @@
     margin-left: auto;
     padding: var(--gap-tiny) var(--gap-smaller);
 }
+
+@media screen and (max-width: 900px) {
+    /* modal do carrinho */
+    .carrinho_modal .carrinho_container {
+        padding: var(--gap-smaller) !important;
+    }
+}

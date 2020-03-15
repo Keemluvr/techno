@@ -6,6 +6,7 @@
 
     /* tamanho */
     --font-size-small: 1rem;
+    --font-size-smaller: 1.5rem;
     --font-size-normal: 1.75rem;
     --font-size-large: 3rem;
 }

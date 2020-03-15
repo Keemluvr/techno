@@ -112,3 +112,55 @@
 .modal .avaliacao > .avaliacao_usuario {
     font-weight: bold;
 }
+
+@media screen and (max-width: 900px) {
+    .modal {
+        padding: var(--gap-tiny);
+    }
+
+    /* container da modal */
+    .modal .modal_container {
+        gap: var(--gap-smaller);
+        background: var(--color-secondary) !important;
+        padding: var(--gap-tiny) 0 !important;
+        margin: 0;
+    }
+
+    /* container da imagem do produto na modal */
+    .modal .modal_img {
+        grid-row: 2;
+        margin-top: 0;
+        height: 50vh;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* imagem do produto na modal */
+    .modal .modal_img > img {
+        max-width: 100%;
+        max-width: initial;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        transform: translate(0%,-15%);
+    }
+
+    /* dados do produto na modal */
+    .modal .modal_dados {
+        grid-column: 1;
+        padding: var(--gap-tiny);
+    }
+
+    /* botão na modal */
+    .modal .modal_btn {
+        margin-top: var(--gap-smaller) !important;
+    }
+
+    /* avaliacao do produto na modal */
+    .modal .avaliacoes {
+        grid-column: 1;
+        padding: var(--gap-tiny);
+    }
+}

@@ -4,7 +4,7 @@
 }
 
 /* produto */
-.produtos > .produto {
+.produtos .produto {
     display: flex;
     align-items: center;
     margin-bottom: var(--gap-small);
@@ -22,4 +22,29 @@
 /* preco do produto */
 .produtos .produto_preco {
     color: var(--color-primary-light);
+}
+
+@media screen and (max-width: 900px) {
+    .produtos {
+        margin-top: var(--gap-small);
+    }
+
+    /* produto */
+    .produtos .produto {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 80vw;
+        margin: var(--gap-smaller) auto;
+    }
+
+    /* dados do produto */
+    .produtos .produto_info {
+        padding: var(--gap-smaller);
+    }
+
+    /* imagem do produto */
+    .produtos .produto_img {
+        max-width: 100%;
+    }
+
 }
