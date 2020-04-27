@@ -6,7 +6,8 @@
 
 ## :wolf: Origamid  
 [Origamid](https://www.origamid.com)  
-Curso: [Vue](https://www.origamid.com/curso/vue-js-completo/)
+course: [Vue](https://www.origamid.com/curso/vue-js-completo/)
 
-## :heavy_exclamation_mark: Observação
-A organização das pastas não segue a organização das pastas das aulas, já que foi utilizado ITCSS e RSCSS para testes nesse projeto.
+## :heavy_exclamation_mark: Warning
+
+The organization of the folders does not follow the organization of the class folders, since ITCSS and RSCSS were used for tests in this project.
