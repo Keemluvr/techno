@@ -10,4 +10,4 @@ course: [Vue](https://www.origamid.com/curso/vue-js-completo/)
 
 ## :heavy_exclamation_mark: Warning
 
-The organization of the folders does not follow the organization of the class folders, since ITCSS and RSCSS were used for tests in this project.
+The organization of the folders doesn't follow the organization of the class folders, since ITCSS and RSCSS were used for tests in this project.
